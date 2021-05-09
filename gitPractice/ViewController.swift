@@ -8,7 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let table: UITableView = {
+        let table = UITableView()
+        return table
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
