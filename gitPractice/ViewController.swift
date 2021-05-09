@@ -7,13 +7,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        UITableViewCell()
+    }
+    
     let table: UITableView = {
         let table = UITableView()
+        table.backgroundColor = .white
         return table
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        table.dataSource = self
         // Do any additional setup after loading the view.
     }
 
